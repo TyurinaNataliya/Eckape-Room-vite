@@ -26,9 +26,7 @@ function QuestCard({ quest }: QuestCardProps): JSX.Element {
         </div>
         <div className="quest-card__content">
           <div className="quest-card__info-wrapper">
-            <a className="quest-card__link" href={AppRoute.Quest}>
-              {title}
-            </a>
+            <a className="quest-card__link">{title}</a>
           </div>
           <ul className="tags quest-card__tags">
             <li className="tags__item">

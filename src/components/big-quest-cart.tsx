@@ -1,6 +1,7 @@
 import { useLayoutEffect } from 'react';
 import {
   AppRoute,
+  AuthorizationStatus,
   LevelEnglishRussia,
   QuestsVarietyEnglishRussia,
 } from '../const';
@@ -19,6 +20,9 @@ function BigQuestCard(): JSX.Element {
   }, [dispatch, questId]);
 
   const quest = useAppSelector((state) => state.quest.quest);
+  const authorizationStatus = useAppSelector(
+    (state) => state.authorizationStatus.authStatus
+  );
 
   return (
     <main className="decorated-page quest-page">
@@ -64,7 +68,13 @@ function BigQuestCard(): JSX.Element {
             </li>
           </ul>
           <p className="quest-page__description">{quest?.description}</p>
-          <Link to={AppRoute.Booking}>
+          <Link
+            to={
+              authorizationStatus === AuthorizationStatus.Auth
+                ? AppRoute.Booking
+                : AppRoute.Login
+            }
+          >
             <a className="btn btn--accent btn--cta quest-page__btn">
               Забронировать
             </a>
