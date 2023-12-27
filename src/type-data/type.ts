@@ -12,6 +12,31 @@ export type TypeQuest = {
   description: string;
   coverImg: string;
   coverImgWebp: string;
+  location: {
+    address: string;
+    coords: [number[]];
+  };
+};
+export type TypeQuestBooking = {
+  id: string;
+  location: {
+    address: string;
+    coords: number[];
+  };
+  slots: {
+    today: [
+      {
+        time: string;
+        isAvailable: boolean;
+      }
+    ];
+    tomorrow: [
+      {
+        time: string;
+        isAvailable: boolean;
+      }
+    ];
+  };
 };
 
 export type Location = {
