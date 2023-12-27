@@ -1,3 +1,4 @@
+import { LevelEnglishRussia } from '../const';
 import { TypeQuest } from '../type-data/type';
 
 type MyQuestsCardProps = {
@@ -5,7 +6,7 @@ type MyQuestsCardProps = {
 };
 
 function MyQuestsCard({ questFavorite }: MyQuestsCardProps): JSX.Element {
-  const { previewImgWebp, previewImg } = questFavorite;
+  const { previewImgWebp, previewImg, level } = questFavorite;
   return (
     <div className="quest-card">
       <div className="quest-card__img">
@@ -42,7 +43,7 @@ function MyQuestsCard({ questFavorite }: MyQuestsCardProps): JSX.Element {
             <svg width="14" height="14" aria-hidden="true">
               <use xlinkHref="#icon-level"></use>
             </svg>
-            Средний
+            {LevelEnglishRussia[level]}
           </li>
         </ul>
         <button

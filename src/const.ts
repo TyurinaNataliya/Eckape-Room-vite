@@ -98,6 +98,8 @@ const TIME_SELEKTION_TOMORROW = ['11:00', '15:00', '17:30', '19:45', '21:30'];
 
 const URL_MARKER =
   'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/main-pin.svg';
+const DEFAULT_URL_MARKER =
+  'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/pin.svg';
 const DEFAULT_QUESTS_VARIETY = 'all-quests';
 const DEFAULT_LEVEL_VARIETY = 'any';
 
@@ -121,4 +123,5 @@ export {
   URL_MARKER,
   NAME_LEVEL_QUESTS,
   NAME_LEVEL_QUESTS_ENGLISH,
+  DEFAULT_URL_MARKER,
 };

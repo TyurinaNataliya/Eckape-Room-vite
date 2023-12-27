@@ -3,6 +3,8 @@ import { Footer } from '../../components/footer';
 import { Header } from '../../components/header';
 import { ListButtonSelectionTime } from '../../components/list-button-selection-time';
 import { useAppSelector } from '../../hooks/store';
+import { Map } from '../../components/map';
+import { LocationEscapeRoom } from '../../const';
 
 function BookingContainer(): JSX.Element {
   const quest = useAppSelector((state) => state.quest.quest);
@@ -57,7 +59,9 @@ function BookingContainer(): JSX.Element {
           <div className="page-content__item">
             <div className="booking-map">
               <div className="map">
-                <div className="map__container"></div>
+                <div className="map__container">
+                  <Map LocationEscapeRoom={LocationEscapeRoom} />
+                </div>
               </div>
               <p className="booking-map__address">
                 Вы&nbsp;выбрали: наб. реки Карповки&nbsp;5, лит&nbsp;П, м.

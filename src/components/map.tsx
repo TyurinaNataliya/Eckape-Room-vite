@@ -41,6 +41,6 @@ function Map({ LocationEscapeRoom }: MapProp) {
     map,
   ]);
 
-  return <div style={{ height: '500px' }} ref={mapRef}></div>;
+  return <div style={{ height: '550px' }} ref={mapRef}></div>;
 }
 export { Map };
